@@ -310,13 +310,15 @@
       
         
           
-            <h4 id="防火墙启动，停止，重启"><a href="#防火墙启动，停止，重启" class="headerlink" title="[防火墙启动，停止，重启]"></a>[防火墙启动，停止，重启]</h4><h5 id="1-启动"><a href="#1-启动" class="headerlink" title="1.启动"></a>1.启动</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">systemctl start firewalld</span><br><span class="line">```bash</span><br><span class="line">##### 2.停止</span><br><span class="line">```bash</span><br><span class="line">systemctl stop firewalld</span><br><span class="line">```bash</span><br><span class="line">##### 3.重启</span><br></pre></td></tr></table></figure>
+            <h4 id="防火墙启动，停止，重启"><a href="#防火墙启动，停止，重启" class="headerlink" title="[防火墙启动，停止，重启]"></a>[防火墙启动，停止，重启]</h4><h5 id="1-启动"><a href="#1-启动" class="headerlink" title="1.启动"></a>1.启动</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl start firewalld</span><br></pre></td></tr></table></figure>
 
-<p>systemctl restart firewall</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">##### 4.设置开机启用防火墙</span></span><br></pre></td></tr></table></figure>
+<h5 id="2-停止"><a href="#2-停止" class="headerlink" title="2.停止"></a>2.停止</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl stop firewalld</span><br></pre></td></tr></table></figure>
 
-<p>systemctl enbale firewalld</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">##### 5.设置开机不启用防火墙</span></span><br><span class="line">```bash</span><br><span class="line">systemclt <span class="built_in">disable</span> firewalld</span><br></pre></td></tr></table></figure>
+<h5 id="3-重启"><a href="#3-重启" class="headerlink" title="3.重启"></a>3.重启</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart firewall</span><br></pre></td></tr></table></figure>
+
+<h5 id="4-设置开机启用防火墙"><a href="#4-设置开机启用防火墙" class="headerlink" title="4.设置开机启用防火墙"></a>4.设置开机启用防火墙</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl enbale firewalld</span><br></pre></td></tr></table></figure>
+
+<h5 id="5-设置开机不启用防火墙"><a href="#5-设置开机不启用防火墙" class="headerlink" title="5.设置开机不启用防火墙"></a>5.设置开机不启用防火墙</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemclt <span class="built_in">disable</span> firewalld</span><br></pre></td></tr></table></figure>
 
 <h4 id="设置端口"><a href="#设置端口" class="headerlink" title="设置端口"></a>设置端口</h4><h5 id="1-开放端口号"><a href="#1-开放端口号" class="headerlink" title="1.开放端口号"></a>1.开放端口号</h5><p><code>--zone</code> ： 作用域</p>
 <p><code>--add-port=80/tcp</code> ： 添加端口（端口号/协议）</p>
