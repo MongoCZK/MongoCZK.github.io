@@ -318,13 +318,13 @@
 
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm -Uvh https://mirror.webtatic.com/yum/el7/webtatic-release.rpm</span><br></pre></td></tr></table></figure>
 
-<p><img src="//yoursite.com/2020/05/07/article5/%E9%98%BF%E9%87%8C%E4%BA%91ECS%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BAwordpress%E5%8D%9A%E5%AE%A2%5Cimage-20200506150428229.png" alt></p>
+<p><img src="//yoursite.com/2020/05/07/article5/article5%5Cimage-20200506150428229.png" alt></p>
 </li>
 <li><p>安装依赖</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install -y php72w php72w-opcache php72w-xml php72w-mcrypt php72w-gd php72w-devel php72w-mysql php72w-intl      php72w-mbstring</span><br></pre></td></tr></table></figure>
 
 <p>安装完后输入<code>php -v</code>可以看到</p>
-<p><img src="//yoursite.com/2020/05/07/article5/%E9%98%BF%E9%87%8C%E4%BA%91ECS%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BAwordpress%E5%8D%9A%E5%AE%A2%5Cimage-20200506150810894.png" alt="image-20200506150810894"></p>
+<p><img src="//yoursite.com/2020/05/07/article5/article5%5Cimage-20200506150810894.png" alt="image-20200506150810894"></p>
 <p>此时php已安装完成</p>
 </li>
 </ol>
@@ -333,7 +333,7 @@
 <li><p>下载</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget http://dev.mysql.com/get/mysql57-community-release-el7-11.noarch.rpm</span><br></pre></td></tr></table></figure>
 
-<p><img src="//yoursite.com/2020/05/07/article5/%E9%98%BF%E9%87%8C%E4%BA%91ECS%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BAwordpress%E5%8D%9A%E5%AE%A2%5Cimage-20200506170908685.png" alt="image-20200506170908685"></p>
+<p><img src="//yoursite.com/2020/05/07/article5/article5%5Cimage-20200506170908685.png" alt="image-20200506170908685"></p>
 </li>
 </ol>
 <ol start="2">
@@ -343,7 +343,7 @@
 <p>  检查安装是否成功可输入以下命令</p>
   <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum repolist enabled | grep <span class="string">"mysql.*-community.*"</span></span><br></pre></td></tr></table></figure>
 
-<p>  <img src="//yoursite.com/2020/05/07/article5/%E9%98%BF%E9%87%8C%E4%BA%91ECS%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BAwordpress%E5%8D%9A%E5%AE%A2%5Cimage-20200506170727910.png" alt></p>
+<p>  <img src="//yoursite.com/2020/05/07/article5/article5%5Cimage-20200506170727910.png" alt></p>
 </li>
 <li><p>安装MySQL服务</p>
   <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install -y mysql-community-server</span><br></pre></td></tr></table></figure>
@@ -355,11 +355,11 @@
   <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -uroot 或者 mysql</span><br></pre></td></tr></table></figure>
 
 <p>  此时会出现错误：</p>
-<p>  <img src="//yoursite.com/2020/05/07/article5/%E9%98%BF%E9%87%8C%E4%BA%91ECS%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BAwordpress%E5%8D%9A%E5%AE%A2%5Cimage-20200506204650843.png" alt="image-20200506204650843"></p>
+<p>  <img src="//yoursite.com/2020/05/07/article5/article5%5Cimage-20200506204650843.png" alt="image-20200506204650843"></p>
 <p>  原因是MySQL5.7为root用户生成了一个默认密码，输入以下命令查看密码：</p>
   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grep &apos;temporary password&apos; /var/log/mysqld.log</span><br></pre></td></tr></table></figure>
 
-<p>  <img src="//yoursite.com/2020/05/07/article5/%E9%98%BF%E9%87%8C%E4%BA%91ECS%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BAwordpress%E5%8D%9A%E5%AE%A2%5Cimage-20200506204818158.png" alt="image-20200506204818158"></p>
+<p>  <img src="//yoursite.com/2020/05/07/article5/article5%5Cimage-20200506204818158.png" alt="image-20200506204818158"></p>
   <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mysql -uroot -p</span><br><span class="line"><span class="comment">#回车后输入默认密码即可登录</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>更改密码</p>
@@ -394,7 +394,7 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf wordpress-5.4-zh_CN.tar.gz</span><br></pre></td></tr></table></figure>
 
 <p>解压完后会生成一个wordpress文件</p>
-<p><img src="//yoursite.com/2020/05/07/article5/%E9%98%BF%E9%87%8C%E4%BA%91ECS%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BAwordpress%E5%8D%9A%E5%AE%A2%5Cimage-20200506162207751.png" alt="image-20200506162207751"></p>
+<p><img src="//yoursite.com/2020/05/07/article5/article5%5Cimage-20200506162207751.png" alt="image-20200506162207751"></p>
 <p>移动到apache默认根目录</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv ./wordpress/*  /var/www/html</span><br></pre></td></tr></table></figure>
 
@@ -410,7 +410,7 @@
 <ol start="2">
 <li><p>官网下载安装包解压上传</p>
 <p> 在  <a href="https://cn.wordpress.org/download/" target="_blank" rel="noopener">wordpress</a>中下载安装包，进行解压，然后按1方式配置文件，将文件内容上传至/var/www/html/目录下，我用的是FileZilla工具上传</p>
-<p> <img src="//yoursite.com/2020/05/07/article5/%E9%98%BF%E9%87%8C%E4%BA%91ECS%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BAwordpress%E5%8D%9A%E5%AE%A2%5Cimage-20200506163045975.png" alt="image-20200506163045975"></p>
+<p> <img src="//yoursite.com/2020/05/07/article5/article5%5Cimage-20200506163045975.png" alt="image-20200506163045975"></p>
 </li>
 </ol>
 <p>三、登录设置</p>
@@ -418,18 +418,18 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://www.xxx.com/wp-admin/install.php</span><br></pre></td></tr></table></figure>
 
 <p>可以看到如下页面：</p>
-<p><img src="//yoursite.com/2020/05/07/article5/%E9%98%BF%E9%87%8C%E4%BA%91ECS%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BAwordpress%E5%8D%9A%E5%AE%A2%5Cimage-20200506230150903.png" alt="image-20200506230150903"></p>
+<p><img src="//yoursite.com/2020/05/07/article5/article5%5Cimage-20200506230150903.png" alt="image-20200506230150903"></p>
 <p>填写完后进行安装，成功后登录即可</p>
-<p><img src="//yoursite.com/2020/05/07/article5/%E9%98%BF%E9%87%8C%E4%BA%91ECS%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BAwordpress%E5%8D%9A%E5%AE%A2%5Cimage-20200506230400627.png" alt="image-20200506230400627"></p>
+<p><img src="//yoursite.com/2020/05/07/article5/article5%5Cimage-20200506230400627.png" alt="image-20200506230400627"></p>
 <p><strong>可能遇到的问题</strong></p>
 <ul>
 <li><p>没有上级目录写入权限</p>
-<p><img src="//yoursite.com/2020/05/07/article5/%E9%98%BF%E9%87%8C%E4%BA%91ECS%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BAwordpress%E5%8D%9A%E5%AE%A2%5Cimage-20200506232117299.png" alt="image-20200506232117299"></p>
+<p><img src="//yoursite.com/2020/05/07/article5/article5%5Cimage-20200506232117299.png" alt="image-20200506232117299"></p>
 <p>当你尝试上传图片时，出现如图所示错误</p>
 <ol>
 <li>检查是否有uploads文件夹</li>
 </ol>
-<p><img src="//yoursite.com/2020/05/07/article5/%E9%98%BF%E9%87%8C%E4%BA%91ECS%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BAwordpress%E5%8D%9A%E5%AE%A2%5Cimage-20200506232551816.png" alt="image-20200506232551816"></p>
+<p><img src="//yoursite.com/2020/05/07/article5/article5%5Cimage-20200506232551816.png" alt="image-20200506232551816"></p>
 <p>可以用远程连接工具直接创建或者在终端中使用如下命令</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /var/www/html/wp-content</span><br><span class="line"></span><br><span class="line">mkdir uploads</span><br></pre></td></tr></table></figure>
 
@@ -438,9 +438,9 @@
 </ol>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod -R 777 uploads</span><br></pre></td></tr></table></figure>
 
-<p><img src="//yoursite.com/2020/05/07/article5/%E9%98%BF%E9%87%8C%E4%BA%91ECS%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BAwordpress%E5%8D%9A%E5%AE%A2%5Cimage-20200506233053414.png" alt="image-20200506233053414"></p>
+<p><img src="//yoursite.com/2020/05/07/article5/article5%5Cimage-20200506233053414.png" alt="image-20200506233053414"></p>
 <p>接下来可以正常上传图片了</p>
-<p><img src="//yoursite.com/2020/05/07/article5/%E9%98%BF%E9%87%8C%E4%BA%91ECS%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BAwordpress%E5%8D%9A%E5%AE%A2%5Cimage-20200506233203974.png" alt="image-20200506233203974"></p>
+<p><img src="//yoursite.com/2020/05/07/article5/article5%5Cimage-20200506233203974.png" alt="image-20200506233203974"></p>
 </li>
 <li><p>出现无法连接到FTP服务器</p>
 <p>当上传主题或其他操作时，输入ftp账号密码后却无法连接</p>
@@ -450,18 +450,18 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">define(<span class="string">'FS_METHOD'</span>, <span class="string">"direct"</span>);</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>上传主题、插件或更新主题、插件时，无法创建目录</p>
-<p><img src="//yoursite.com/2020/05/07/article5/%E9%98%BF%E9%87%8C%E4%BA%91ECS%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BAwordpress%E5%8D%9A%E5%AE%A2%5Cimage-20200507085439010.png" alt="image-20200507085439010"></p>
+<p><img src="//yoursite.com/2020/05/07/article5/article5%5Cimage-20200507085439010.png" alt="image-20200507085439010"></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /var/www/html</span><br><span class="line"></span><br><span class="line">ll  <span class="comment">#列出文件目录，可以查看文件全信啊</span></span><br><span class="line"></span><br><span class="line">chmod -R 777 wp-content  <span class="comment">#赋予wp-content文件写权限</span></span><br></pre></td></tr></table></figure>
 
 <p>接下来可以进入wp-content，查看文件的权限</p>
-<p><img src="//yoursite.com/2020/05/07/article5/%E9%98%BF%E9%87%8C%E4%BA%91ECS%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BAwordpress%E5%8D%9A%E5%AE%A2%5Cimage-20200507090643394.png" alt="image-20200507090643394"></p>
+<p><img src="//yoursite.com/2020/05/07/article5/article5%5Cimage-20200507090643394.png" alt="image-20200507090643394"></p>
 <p>此时，已经拥有themes（主题）、plugins（插件）等文件夹的写入权限了</p>
 </li>
 </ul>
 <p><strong>补充：</strong></p>
 <p>提供一个有免费wordpress主题的网站：<a href="http://www.thefox.cn/" target="_blank" rel="noopener">wordpress主题</a></p>
 <p>下载主题压缩包后，上传压缩包</p>
-<p><img src="//yoursite.com/2020/05/07/article5/%E9%98%BF%E9%87%8C%E4%BA%91ECS%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BAwordpress%E5%8D%9A%E5%AE%A2%5Cimage-20200507093144103.png" alt="image-20200507093144103"></p>
+<p><img src="//yoursite.com/2020/05/07/article5/article5%5Cimage-20200507093144103.png" alt="image-20200507093144103"></p>
 <p>假如遇到压缩包过大，超过限值时，输入以下命令</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查找php.ini配置文件</span></span><br><span class="line">sudo find /* -name <span class="string">'php.ini'</span> </span><br><span class="line"></span><br><span class="line"><span class="comment">#编辑</span></span><br><span class="line">vim /etc/php.ini</span><br><span class="line"></span><br><span class="line"><span class="comment">#更改值</span></span><br><span class="line">upload_max_filesize = 4M</span><br></pre></td></tr></table></figure>
 
