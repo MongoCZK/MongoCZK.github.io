@@ -239,6 +239,141 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://mongoczk.github.io/2020/05/08/article6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="CZK">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/05/08/article6/" itemprop="url">hexo+github搭建博客上传图片问题</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-05-08T00:43:26+08:00">
+                2020-05-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ul>
+<li><p>设置post_asset_folder配置项</p>
+<p>在博客根目录右键打开Git bash</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">vim _config.yml</span><br><span class="line"></span><br><span class="line"><span class="comment">#设置为true</span></span><br><span class="line">post_asset_folder : <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<p><img src="//mongoczk.github.io/2020/05/08/article6/article6%5Cimage-20200508004718471.png" alt="image-20200508004718471"></p>
+<p>​        设置为true后，当是用<code>hexo new &#39;page&#39;</code>命令创建新文章时，也会在_post文件下创建新文章同名的文件夹，你可以把与改文章相关的所有资源都放到那个文件夹里</p>
+<p>​        记得设置url为你的github地址，否则图片路径出错，无法找到</p>
+<p><img src="//mongoczk.github.io/2020/05/08/article6/article6%5Cimage-20200508005224910.png" alt="image-20200508005224910"></p>
+<ul>
+<li><p>引入图片资源</p>
+<p>使用<code>![][page/test.png]</code>方式引入图片，你在page.md文档中使用的资源都放在同目录下的page文件夹中</p>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://mongoczk.github.io/2020/05/07/article5/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1112,7 +1247,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1125,7 +1260,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
