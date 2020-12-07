@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="HTML文档 &amp;lt;meta&amp;gt;元素总结(HTML规范)：&amp;lt;meta&amp;gt;元素表示那些不能用其他HTML元素之一表示的任何元数据信息。 &amp;lt;meta&amp;gt; 元素定义的元数据类型包括以下几种:  设置了name 属性，表明&amp;lt;meta&amp;gt;元素提供的是文档级别的元素据，应用与整个页面 设置了http-equiv ，表明&amp;lt;meta&amp;gt;元素是编译指令，提供的信息与类似">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="https://mongoczk.github.io/2020/05/25/article7/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="HTML文档 &amp;lt;meta&amp;gt;元素总结(HTML规范)：&amp;lt;meta&amp;gt;元素表示那些不能用其他HTML元素之一表示的任何元数据信息。 &amp;lt;meta&amp;gt; 元素定义的元数据类型包括以下几种:  设置了name 属性，表明&amp;lt;meta&amp;gt;元素提供的是文档级别的元素据，应用与整个页面 设置了http-equiv ，表明&amp;lt;meta&amp;gt;元素是编译指令，提供的信息与类似">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2020-05-26T02:07:01.767Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="HTML文档 &amp;lt;meta&amp;gt;元素总结(HTML规范)：&amp;lt;meta&amp;gt;元素表示那些不能用其他HTML元素之一表示的任何元数据信息。 &amp;lt;meta&amp;gt; 元素定义的元数据类型包括以下几种:  设置了name 属性，表明&amp;lt;meta&amp;gt;元素提供的是文档级别的元素据，应用与整个页面 设置了http-equiv ，表明&amp;lt;meta&amp;gt;元素是编译指令，提供的信息与类似">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://mongoczk.github.io/2020/05/25/article7/">
+
+
+
+
+
+  <title> | Hexo</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Hexo</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://mongoczk.github.io/2020/05/25/article7/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="CZK">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline"></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-05-25T09:17:18+08:00">
+                2020-05-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h5 id="HTML文档-lt-meta-gt-元素总结-HTML规范-："><a href="#HTML文档-lt-meta-gt-元素总结-HTML规范-：" class="headerlink" title="HTML文档 &lt;meta&gt;元素总结(HTML规范)："></a>HTML文档 <code>&lt;meta&gt;</code>元素总结(HTML规范)：</h5><p><code>&lt;meta&gt;</code>元素表示那些不能用其他HTML元素之一表示的任何元数据信息。</p>
+<p><code>&lt;meta&gt;</code> 元素定义的元数据类型包括以下几种:</p>
+<ul>
+<li>设置了<code>name</code> 属性，表明<code>&lt;meta&gt;</code>元素提供的是文档级别的元素据，应用与整个页面</li>
+<li>设置了<code>http-equiv</code> ，表明<code>&lt;meta&gt;</code>元素是编译指令，提供的信息与类似命名的HTTP头部相同</li>
+<li>如果设置了<code>chartset</code> , 表明<code>&lt;meta&gt;</code> 元素是一个字符集生命，告诉文档使用哪一种字符编码</li>
+</ul>
+<h5 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h5><h6 id="content"><a href="#content" class="headerlink" title="content"></a><code>content</code></h6><p>此属性包含<code>http-equiv</code>或<code>name</code>属性的值，具体取决于所使用的值</p>
+<h6 id="http-equiv"><a href="#http-equiv" class="headerlink" title="http-equiv"></a><code>http-equiv</code></h6><p>此属性定义了一个编译指示指令，其所有允许的值都是特定HTTP头部的名称：</p>
+<ul>
+<li><p><code>content-security-policy</code></p>
+<p>它允许页面作者定义当前页的<code>内容策略</code>。内容策略主要指定允许的服务器源和脚本端点，这有助于防止跨站点脚本攻击</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"Content-Security-Policy"</span> <span class="attr">content</span>=<span class="string">"script-src 'self'; object-src 'none'"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>content-type</code></p>
+<p>如果使用此属性，其值必须为<code>text/html; chartset=utf-8</code> 。该属性只能用于MIME type为<code>text/html</code>的文档，不能用于MIME type为XML的文档</p>
+</li>
+<li><p><code>Cache-Control</code>  </p>
+<p><code>Cache-Control</code>指定请求和响应遵循的缓存机制。请求时的缓存指令有：</p>
+<ul>
+<li><p><code>public</code>  指示响应可被任何缓存区缓存</p>
+</li>
+<li><p><code>private</code>  只为单个用户缓存，因此不允许任何中继进行缓存（如CDN不允许缓存private的响应）</p>
+</li>
+<li><p><code>no-cache</code> 指示先发送请求，与服务器确认该资源是否被更改，如果未被更改，则使用缓存</p>
+</li>
+<li><p><code>no-store</code> 用于防止重要的信息被无意的发布。强制缓存在任何情况下都不要保留任何副本，即每次都要去服务器上下载完整的响应</p>
+</li>
+<li><p><code>max-age</code>  指示客户机可以接收生存期不大于指定时间的响应</p>
+</li>
+<li><p><code>min-fresh</code>  指示客户机可以接收响应时间小于当前时间加上指定时间的响应</p>
+</li>
+<li><p><code>max-stale</code>  指示客户机可以接收超出超时期间的响应消息。如果指定<code>max-stale</code>消息的值，那么客户机可以接收超出超时期指定值之内的响应消息</p>
+</li>
+</ul>
+</li>
+<li><p><code>expires</code></p>
+<p>设定网页的到期时间，过期后网页必须到服务器上重新传输</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"Expires"</span> <span class="attr">content</span>=<span class="string">"0"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"expires"</span> <span class="attr">content</span>=<span class="string">"Sunday 26 May 2020 01:00 GMT"</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>pragma</code></p>
+<p>用于设定禁止浏览器 从本地机的缓存中调阅页面内容，设定后一旦离开网页就无法从Cache中再调出</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"Pragma"</span> <span class="attr">content</span>=<span class="string">"no-cache"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>常配合前面的指示使用，清除浏览器的缓存</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"Pragma"</span> <span class="attr">content</span>=<span class="string">"no-cache"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"Cache-Control"</span> <span class="attr">content</span>=<span class="string">"no-cache"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"Expires"</span> <span class="attr">content</span>=<span class="string">"0"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>pics_label</code></p>
+<p>网页等级评定</p>
+</li>
+<li><p><code>default-style</code></p>
+<p>设置默认CSS样式表组的名称</p>
+</li>
+<li><p><code>set-cookie</code></p>
+<p>WHATWG规范说明： 此指示不符合约定且无效，用户代理需忽略此指示</p>
+</li>
+<li><p><code>x-ua-compatible</code></p>
+<p>如果使用这个属性，content属性必须包含<code>IE=edge</code>  ， 用户代理必须忽略此编译指示</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"x-ua-compatible"</span> <span class="attr">content</span>=<span class="string">"IE=edge,chrome=1"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>refresh</code></p>
+<p>指定此属性时，</p>
+<ul>
+<li><p>如果<code>content</code>属性只包含一个正整数，则是重新载入页面的时间间隔（秒）</p>
+</li>
+<li><p>如果<code>content</code> 包含一个正整数并且跟着一个字符串<code>; url=</code> 和一个合法的URL，则是重定向到指定链接的时间间隔（秒）</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"refresh"</span> <span class="attr">content</span>=<span class="string">"2；URL=http://www.baidu.com/"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+</li>
+</ul>
+<h6 id="name"><a href="#name" class="headerlink" title="name"></a><code>name</code></h6><p><code>name</code>和<code>content</code>属性可以一起使用，以名-值对的方式给文档提供元数据名称，其中那么作为元数据的名称，content作为元数据的值。<code>name</code>属性的可能值为：</p>
+<ul>
+<li><p><code>application-name</code> ， 定义正运行在该网页上的网络应用名称</p>
+</li>
+<li><p><code>author</code>，文档的作者名称，可以用自由的格式去定义</p>
+</li>
+<li><p><code>description</code>， <code>content</code>属性值为页面内容的简短和精确的描述。一些浏览器，如火狐和opera将其用作书签页面的默认描述</p>
+</li>
+<li><p><code>generator</code> ,  <code>content</code>属性值为生成页面的软件的标识符</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">generator</span> <span class="attr">content</span>=<span class="string">"Visual Studio Code 1.35.1"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>keywords</code>,   <code>content</code>属性值为以逗号分隔的页面内容相关的单词</p>
+</li>
+<li><p><code>referrer</code> ,  控制所有从文档发出的HTTP请求中HTTP<code>Referer</code>首部的内容</p>
+<p><code>&lt;meta name=&quot;referrer&quot;&gt;</code>content属性可取的值：</p>
+<table>
+<thead>
+<tr>
+<th align="left">name</th>
+<th>content</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>no-referrer</code></td>
+<td>不要发送HTTP<code>Referer</code>首部</td>
+</tr>
+<tr>
+<td align="left"><code>origin</code></td>
+<td>发送当前文档的<code>origin</code></td>
+</tr>
+<tr>
+<td align="left"><code>no-referrer-when-downgrade</code></td>
+<td>当目的地是先验安全的(https-&gt;https)则发送 <a href="https://developer.mozilla.org/en-US/docs/Glossary/Origin" target="_blank" rel="noopener">origin</a> 作为 referrer ，但是当目的地是较不安全的 (https-&gt;http)时则不发送 referrer 。这个是默认的行为。</td>
+</tr>
+<tr>
+<td align="left"><code>origin-when-crossorigin</code></td>
+<td>在同源请求下，发送完整的URL(不含查询参数)，其他情况下则仅发送当前文档的<code>origin</code></td>
+</tr>
+<tr>
+<td align="left"><code>unsafe-URL</code></td>
+<td>在同源请求下，发送完整的URL（不含查询参数）</td>
+</tr>
+</tbody></table>
+</li>
+<li><p><code>viewport</code>(<a href="https://drafts.csswg.org/css-device-adapt/#the-viewport" target="_blank" rel="noopener">The CSS Device Adaptation（CSS设备适配规范）</a>), 它提供有关视口初始大小的提示，仅供移动设备使用</p>
+<p><code>&lt;meta name=&quot;viewport&quot;&gt;</code>  , <code>content</code>属性值内容有:</p>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>value</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>width</code></td>
+<td>一个正整数或者字符串<code>device-width</code></td>
+<td>以px为单位，定义viewport（视口）的宽度</td>
+</tr>
+<tr>
+<td><code>height</code></td>
+<td>一个正整数或者字符串<code>device-height</code></td>
+<td>以px为单位，定义viewport（视口）的高度</td>
+</tr>
+<tr>
+<td><code>initial-scale</code></td>
+<td>一个0.0到10.0之间的正数</td>
+<td>定义设备宽度（纵向模式下的设备宽度或横向模式下的设备高度）与视口大小之间的缩放比率</td>
+</tr>
+<tr>
+<td><code>maximum-scale</code></td>
+<td>一个0.0到10.0之间的正数</td>
+<td>定义缩放的最大值；它必须大于或等于<code>minimum-scale</code>的值，不然会导致不确定的行为发生</td>
+</tr>
+<tr>
+<td><code>minimum-scale</code></td>
+<td>一个0.0到10.0之间的正数</td>
+<td>定义缩放的最小值；它必须小于或等于<code>maximum-scale</code>的值，不然会导致不确定的行为发生</td>
+</tr>
+<tr>
+<td><code>user-scalable</code></td>
+<td><code>yes</code> 或者 <code>no</code></td>
+<td>如果设置为<code>no</code>,用户将不能放大或者缩小网页。默认值为<code>yes</code></td>
+</tr>
+</tbody></table>
+</li>
+<li><p><code>theme-color</code>,  表示用户代理用来自定义页面或周围用户界面显示的建议颜色。</p>
+<p><code>content</code>属性值包含有效的CSS<code>&lt;color&gt;</code></p>
+</li>
+<li><p><code>color-scheme</code>(<a href="https://drafts.csswg.org/css-color-adjust-1/#color-scheme-meta" target="_blank" rel="noopener">The CSS Color Adjustment （CSS颜色调整规范）</a>) , 指定与文档兼容的一种或多种配色方案。<code>&lt;meta name=&quot;color-scheme&quot;&gt;</code>的主要用途是</p>
+<p>指示light和dark模式的兼容性以及优先顺序，<code>content</code>属性值可能为</p>
+<ul>
+<li><p><code>normal</code>  文档仅使用默认调色板进行渲染</p>
+</li>
+<li><p>[ <code>light</code> | <code>dark</code>] +  文档支持一种或多种配色方案。指示多种配色方案表示文档首选第一种方案，但如果用户喜欢第二种制定方案，则可以接受。</p>
+</li>
+<li><p><code>only light</code>  表示文档仅支持浅色背景， 背景为浅色，前景为深色。根据规范，只有dark是无效的。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"color-scheme"</span> <span class="attr">content</span>=<span class="string">"dark light"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+</li>
+</ul>
+<h6 id="charset"><a href="#charset" class="headerlink" title="charset"></a><code>charset</code></h6><p>此属性声明了文档的字符编码，如果使用了这个属性，其值必须是与ASCII大小写无关的<code>utf-8</code></p>
+<p>注意： <code>chartset</code>属性在XML文档中不起作用，但依然能在XML文档中使用，以便于从XML文档迁出或向XML文档的迁入</p>
+<h6 id="viewport"><a href="#viewport" class="headerlink" title="@viewport"></a>@viewport</h6><p>上面提到一个<code>&lt;meta name=&quot;viewport&quot;&gt;</code>，CSS中有一个<code>@viewport</code>也有类似的作用，它让我们可以对文档的大小进行设置viewport。此特性主要被用于移动设备，但是也可以用在支持类似”固定到边缘”等特性的桌面浏览器，如微软的Edge。</p>
+<p>其规则描述符有：</p>
+<ul>
+<li><code>min-width</code>  设置viewport的最小宽度</li>
+<li><code>max-width</code>  设置viewport的最大宽度</li>
+<li><code>width</code>  同时设置<code>min-width</code>和<code>max-width</code></li>
+<li><code>min-height</code> 设置viewport的最小高度</li>
+<li><code>max-height</code>  设置viewport的最大高度</li>
+<li><code>height</code> 同时设置<code>min-height</code> 和<code>max-height</code></li>
+<li><code>zoom</code>  设置初始缩放系数</li>
+<li><code>min-zoom</code> 设置最小缩放系数</li>
+<li><code>max-zoom</code>  设置最大缩放系数</li>
+<li><code>user-zoom</code>  设置用户是能更改缩放系数</li>
+<li><code>orientation</code>  设置文档的方向</li>
+<li><code>viewport-fit</code>  控制在非矩形显示器上显示文档</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">//eg：</span><br><span class="line"><span class="keyword">@viewport</span>&#123;</span><br><span class="line">    <span class="selector-tag">min-width</span>: 1200<span class="selector-tag">px</span>;</span><br><span class="line">    <span class="selector-tag">max-width</span>: 1920<span class="selector-tag">px</span>;</span><br><span class="line">    <span class="selector-tag">zoom</span>: 0<span class="selector-class">.75</span>;</span><br><span class="line">    <span class="selector-tag">min-zoom</span>: 0<span class="selector-class">.5</span>;</span><br><span class="line">    <span class="selector-tag">max-zoom</span>: 1;</span><br><span class="line">    <span class="selector-tag">orientation</span>: <span class="selector-tag">landscape</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>此规则标准化程度不高，使用时应注意浏览器是否支持，可参考   <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/@viewport" target="_blank" rel="noopener">MDN @viewport</a></p>
+<h5 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h5><ol>
+<li><p>MDN文档<code>&lt;meta&gt;</code>元素参考 [ <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/meta" target="_blank" rel="noopener">https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/meta</a> ]</p>
+</li>
+<li><p>MDN文档标准元数据 [ <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/HTML/Element/meta/name" target="_blank" rel="noopener">https://wiki.developer.mozilla.org/en-US/docs/Web/HTML/Element/meta/name</a> ] </p>
+</li>
+<li><p>CSS Color Adjustment [ <a href="https://drafts.csswg.org/css-color-adjust-1/#color-scheme-meta" target="_blank" rel="noopener">https://drafts.csswg.org/css-color-adjust-1/#color-scheme-meta</a> ]</p>
+</li>
+<li><p>WHATWG规范 [ <a href="https://html.spec.whatwg.org/multipage/semantics.html#standard-metadata-names" target="_blank" rel="noopener">https://html.spec.whatwg.org/multipage/semantics.html#standard-metadata-names</a> ]</p>
+</li>
+<li><p>博客 [<a href="https://www.cnblogs.com/wangyang108/p/5995379.html]" target="_blank" rel="noopener">https://www.cnblogs.com/wangyang108/p/5995379.html]</a></p>
+</li>
+</ol>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/05/08/article6/" rel="next" title="hexo+github搭建博客上传图片问题">
+                <i class="fa fa-chevron-left"></i> hexo+github搭建博客上传图片问题
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2020/05/26/article8/" rel="prev" title>
+                 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">CZK</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#HTML文档-lt-meta-gt-元素总结-HTML规范-："><span class="nav-number">1.</span> <span class="nav-text">HTML文档 &lt;meta&gt;元素总结(HTML规范)：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#属性"><span class="nav-number">2.</span> <span class="nav-text">属性</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#content"><span class="nav-number">2.1.</span> <span class="nav-text">content</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#http-equiv"><span class="nav-number">2.2.</span> <span class="nav-text">http-equiv</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#name"><span class="nav-number">2.3.</span> <span class="nav-text">name</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#charset"><span class="nav-number">2.4.</span> <span class="nav-text">charset</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#viewport"><span class="nav-number">2.5.</span> <span class="nav-text">@viewport</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#参考资料："><span class="nav-number">3.</span> <span class="nav-text">参考资料：</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">CZK</span>
+  <span class="post-meta-divider">|</span>
+  <i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+  本站访客数:<span id="busuanzi_value_site_uv"></span>
+  </span>
+  
+</div>
+
+<!-- 
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+ -->
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
